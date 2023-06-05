@@ -3,6 +3,7 @@
 .mode box
 PRAGMA foreign_keys = ON;
 
+-- Elimina las tablas para reiniciar el script
 DROP TABLE clientes;
 DROP TABLE productos;
 DROP TABLE ventas;
@@ -37,4 +38,5 @@ DROP TABLE detalle_ventas_temporal;
 -- Configura el modo de visualización en BOX para facilitar la lectura
 .mode box
 
+-- Realiza consultas de ventas,clientes,detalle_ventas y productos
 .read sql/select_ventas.sql
