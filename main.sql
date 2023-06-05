@@ -7,7 +7,9 @@ PRAGMA foreign_keys = ON;
 .read sql/clientes.sql
 .read sql/productos.sql
 .read sql/ventas.sql
-.read sql/detalle_ventas.sql
+--.read sql/detalle_ventas.sql
+.read sql/detalle_ventas_calculado.sql
+
 
 -- Configura el modo de visulización en CSV para importar datos
 .mode csv
@@ -16,7 +18,16 @@ PRAGMA foreign_keys = ON;
 .import --skip 1 csv/clientes.csv clientes
 .import --skip 1 csv/productos.csv productos
 .import --skip 1 csv/ventas.csv ventas
-.import --skip 1 csv/detalle_ventas.csv detalle_ventas
+--.import --skip 1 csv/detalle_ventas.csv detalle_ventas
+.import csv/detalle_ventas_calculado.csv detalle_ventas_temporal
+
+-- Selecciona los datos de detalle_ventas_temporal y los inserta en detalle_ventas
+INSERT INTO detalle_ventas(id_venta,id_producto,cantidad_producto,precio_unitario)
+SELECT id_venta,id_producto,cantidad_producto,precio_unitario
+FROM detalle_ventas_temporal;
+
+-- Elimina la tabla detalle_ventas_temporal
+DROP TABLE detalle_ventas_temporal;
 
 -- Configura el modo de visualización en BOX para facilitar la lectura
 .mode box
@@ -27,7 +38,8 @@ FROM clientes,ventas,detalle_ventas, productos
 WHERE clientes.id_cliente = ventas.id_cliente
 AND ventas.id_venta = detalle_ventas.id_venta
 AND detalle_ventas.id_producto = productos.id_producto
-ORDER BY ventas.id_venta;
+ORDER BY ventas.id_venta
+LIMIT 10;
 
 -- Forma 2: Alias Une las tablas de clientes, ventas, detalle_ventas y productos
 SELECT v.id_venta, c.nombre, v.fecha, p.producto, dv.cantidad_producto,dv.precio_unitario,dv.total_x_producto 
@@ -35,7 +47,8 @@ FROM clientes as c,ventas as v,detalle_ventas as dv, productos as p
 WHERE c.id_cliente = v.id_cliente
 AND v.id_venta = dv.id_venta
 AND dv.id_producto = p.id_producto
-ORDER BY v.id_venta;
+ORDER BY v.id_venta
+LIMIT 10;
 
 -- Forma 3: Une las tablas de clientes, ventas, detalle_ventas y productos
 SELECT ventas.id_venta, clientes.nombre, ventas.fecha, productos.producto, detalle_ventas.cantidad_producto,detalle_ventas.precio_unitario,detalle_ventas.total_x_producto 
@@ -43,7 +56,8 @@ FROM detalle_ventas
 INNER JOIN ventas ON detalle_ventas.id_venta = ventas.id_venta
 INNER JOIN clientes ON ventas.id_cliente = clientes.id_cliente
 INNER JOIN productos ON detalle_ventas.id_producto = productos.id_producto
-ORDER BY ventas.id_venta;
+ORDER BY ventas.id_venta
+LIMIT 10;
 
 -- Forma 4: Une las tablas de clientes, ventas, detalle_ventas y productos
 SELECT v.id_venta,c.nombre, v.fecha, p.producto, dv.cantidad_producto, dv.precio_unitario, dv.total_x_producto
@@ -51,7 +65,8 @@ FROM detalle_ventas as dv
 INNER JOIN ventas as v ON dv.id_venta = v.id_venta
 INNER JOIN clientes as c ON v.id_cliente = c.id_cliente
 INNER JOIN productos as p ON dv.id_producto = p.id_producto
-ORDER BY v.id_venta;
+ORDER BY v.id_venta
+LIMIT 10;
 
 -- Forma 5: Creación en una vista
 CREATE VIEW IF NOT EXISTS vista1 AS
