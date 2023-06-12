@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS temporal(
     id_temporal integer PRIMARY KEY AUTOINCREMENT,
     valor1 float,
     valor2 float,
-    total float as (valor1 * valor2)
+    total float as (valor1 * valor2) VIRTUAL
 );
 
 insert into temporal (valor1,valor2)
@@ -20,6 +20,13 @@ values
 SELECT id_temporal, valor1, valor2, total
 FROM temporal;
 
+UPDATE temporal
+SET valor1 = 3 
+WHERE id_temporal= 1;
+
+SELECT id_temporal, valor1, valor2, total
+FROM temporal;
+/*
 SELECT id_temporal, valor1, valor2, total, (valor1 + valor2) AS suma
 FROM temporal;
 
@@ -50,3 +57,4 @@ FROM temporal;
 
 .schema
 
+*/

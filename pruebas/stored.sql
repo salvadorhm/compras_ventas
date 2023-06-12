@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS temporal(
     id_temporal integer PRIMARY KEY AUTOINCREMENT,
     valor1 float,
     valor2 float,
-    total float as (valor1 * valor2) STORED
+    total float GENERATED ALWAYS AS (valor1 * valor2) STORED
 );
 
 .import --csv datos.csv t
