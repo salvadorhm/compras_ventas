@@ -56,3 +56,4 @@ SELECT * FROM vista1 LIMIT 3;
 SELECT "Muestra las 10 primeras ventas con un mayor total_x_producto desde la vista1" AS descripcion;
 -- Muestra las 10 primeras ventas con un mayor total_x_producto desde la vista1
 SELECT * FROM vista1 ORDER BY total_x_producto DESC LIMIT 10;
+

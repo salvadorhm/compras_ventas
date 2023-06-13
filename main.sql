@@ -4,10 +4,11 @@
 PRAGMA foreign_keys = ON;
 
 -- Elimina las tablas para reiniciar el script
-DROP TABLE clientes;
-DROP TABLE productos;
-DROP TABLE ventas;
-DROP TABLE detalle_ventas;
+DROP TABLE IF EXISTS clientes;
+DROP TABLE IF EXISTS productos;
+DROP TABLE IF EXISTS ventas;
+DROP TABLE IF EXISTS detalle_ventas;
+DROP VIEW IF EXISTS vista1;
 
 -- Lee los scripts para la creación de las tablas
 .read sql/clientes.sql
@@ -39,4 +40,4 @@ DROP TABLE detalle_ventas_temporal;
 .mode box
 
 -- Realiza consultas de ventas,clientes,detalle_ventas y productos
-.read sql/select_ventas.sql
+.read sql/practica.sql

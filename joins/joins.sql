@@ -1,5 +1,4 @@
 .headers ON
-.mode box
 
 CREATE TABLE IF NOT EXISTS clientes(
     id_cliente integer PRIMARY KEY AUTOINCREMENT,
@@ -36,3 +35,15 @@ WHERE clientes.id_cliente = ventas.id_cliente;
 SELECT clientes.id_cliente,clientes.nombre,ventas.id_venta,ventas.fecha
 FROM clientes
 JOIN ventas ON clientes.id_cliente = ventas.id_cliente;
+
+CREATE VIEW vista_clientes_ventas AS
+SELECT clientes.id_cliente,clientes.nombre,ventas.id_venta,ventas.fecha
+FROM clientes
+JOIN ventas ON clientes.id_cliente = ventas.id_cliente;
+
+SELECT *
+FROM vista_clientes_ventas;
+
+SELECT id_cliente, nombre, COUNT(id_venta) AS numero_compras
+FROM vista_clientes_ventas
+GROUP BY id_cliente, nombre;
