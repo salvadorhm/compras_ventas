@@ -1,0 +1,51 @@
+id_venta,nombre,fecha,id_producto,producto,cantidad_producto,precio_unitario,total_x_producto
+1,"Vaughn Little",2023-01-01,1,Martillo,2,15.99,31.98
+1,"Vaughn Little",2023-01-01,2,Destornillador,3,5.99,17.97
+1,"Vaughn Little",2023-01-01,2,Destornillador,1,5.99,5.99
+2,"Marisha Franco",2023-01-01,3,Taladro,1,79.99,79.99
+2,"Marisha Franco",2023-01-01,1,Martillo,1,15.99,15.99
+2,"Marisha Franco",2023-01-01,3,Taladro,4,79.99,319.96
+3,"Octavio Potter",2023-01-03,5,"Llave inglesa",4,12.99,51.96
+3,"Octavio Potter",2023-01-03,4,"Sierra circular",2,89.99,179.98
+3,"Octavio Potter",2023-01-03,4,"Sierra circular",2,89.99,179.98
+4,"Noble Blevins",2023-01-04,2,Destornillador,3,5.99,17.97
+4,"Noble Blevins",2023-01-04,5,"Llave inglesa",5,12.99,64.95
+4,"Noble Blevins",2023-01-04,5,"Llave inglesa",1,12.99,12.99
+5,"Richard Todd",2023-01-05,1,Martillo,1,15.99,15.99
+5,"Richard Todd",2023-01-05,6,"Pintura en spray",1,8.99,8.99
+5,"Richard Todd",2023-01-05,6,"Pintura en spray",2,8.99,17.98
+6,"Peg Campbell",2023-01-05,3,Taladro,2,79.99,159.98
+6,"Peg Campbell",2023-01-05,7,"Cinta métrica",2,6.99,13.98
+6,"Peg Campbell",2023-01-05,7,"Cinta métrica",1,3.99,3.99
+7,"Shalon Blake",2023-01-05,4,"Sierra circular",1,89.99,89.99
+7,"Shalon Blake",2023-01-05,8,"Tornillos (paquete de 50)",1,3.99,3.99
+7,"Shalon Blake",2023-01-05,8,"Tornillos (paquete de 50)",3,9.99,29.97
+8,"Albert Sandoval",2023-01-08,6,"Pintura en spray",5,8.99,44.95
+8,"Albert Sandoval",2023-01-08,9,"Brocas (set de 10)",3,9.99,29.97
+8,"Albert Sandoval",2023-01-08,9,"Brocas (set de 10)",1,4.99,4.99
+9,"Vania Mack",2023-01-09,5,"Llave inglesa",2,12.99,25.98
+9,"Vania Mack",2023-01-09,10,"Pegamento adhesivo",1,4.99,4.99
+9,"Vania Mack",2023-01-09,10,"Pegamento adhesivo",2,15.99,31.98
+10,"Bradly Roach",2023-01-10,2,Destornillador,1,5.99,5.99
+10,"Bradly Roach",2023-01-10,1,Martillo,2,15.99,31.98
+10,"Bradly Roach",2023-01-10,1,Martillo,1,5.99,5.99
+11,"Vaughn Little",2023-01-10,4,"Sierra circular",3,89.99,269.97
+11,"Vaughn Little",2023-01-10,2,Destornillador,1,5.99,5.99
+12,"Marisha Franco",2023-01-12,7,"Cinta métrica",2,6.99,13.98
+12,"Marisha Franco",2023-01-12,3,Taladro,4,79.99,319.96
+13,"Octavio Potter",2023-01-12,6,"Pintura en spray",1,8.99,8.99
+13,"Octavio Potter",2023-01-12,4,"Sierra circular",2,89.99,179.98
+14,"Noble Blevins",2023-01-12,3,Taladro,4,79.99,319.96
+14,"Noble Blevins",2023-01-12,5,"Llave inglesa",1,12.99,12.99
+15,"Richard Todd",2023-01-15,9,"Brocas (set de 10)",1,9.99,9.99
+15,"Richard Todd",2023-01-15,6,"Pintura en spray",3,8.99,26.97
+16,"Peg Campbell",2023-01-15,5,"Llave inglesa",2,12.99,25.98
+16,"Peg Campbell",2023-01-15,7,"Cinta métrica",2,6.99,13.98
+17,"Shalon Blake",2023-01-17,8,"Tornillos (paquete de 50)",3,3.99,11.97
+17,"Shalon Blake",2023-01-17,8,"Tornillos (paquete de 50)",1,3.99,3.99
+18,"Albert Sandoval",2023-01-18,4,"Sierra circular",1,89.99,89.99
+18,"Albert Sandoval",2023-01-18,9,"Brocas (set de 10)",2,9.99,19.98
+19,"Vania Mack",2023-01-18,1,Martillo,2,15.99,31.98
+19,"Vania Mack",2023-01-18,10,"Pegamento adhesivo",1,4.99,4.99
+20,"Bradly Roach",2023-01-20,3,Taladro,1,79.99,79.99
+20,"Bradly Roach",2023-01-20,1,Martillo,3,15.99,47.97

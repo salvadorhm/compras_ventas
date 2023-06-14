@@ -12,3 +12,5 @@ INNER JOIN ventas as v ON dv.id_venta = v.id_venta
 INNER JOIN clientes as c ON v.id_cliente = c.id_cliente
 INNER JOIN productos as p ON dv.id_producto = p.id_producto
 ORDER BY v.id_venta;
+
+a

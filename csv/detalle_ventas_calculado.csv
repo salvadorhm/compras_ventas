@@ -49,3 +49,4 @@ id_detalle_venta,id_venta,id_producto,cantidad_producto,precio_unitario
 48,8,9,1,4.99
 49,9,10,2,15.99
 50,10,1,1,5.99
+51,21,11,2,10.00
